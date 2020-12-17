@@ -24,7 +24,7 @@ include 'lib/autoload.php';
 
 $loader->get('config/Config');
 $loader->get('config/Route');
-$loader->get('config/Expressions');
+//$loader->get('config/Expressions');
 
 if(empty($_SESSION['lg'])){
   $loader->get('src/Controller/Language');
@@ -33,7 +33,7 @@ if(empty($_SESSION['lg'])){
 $t_loader = new Twig_Loader_Filesystem('src/View');
 $twig = new Twig_Environment($t_loader);
 
-$expressions = new Exp(new Config());
+//$expressions = new Exp(new Config());
 
 //forçar redirecionamento para HTTPS
 //if(empty($_SERVER['HTTPS'])){ header('Location: https://'.$_SERVER['HTTP_HOST']); } else { $protocol = 'https'; }
