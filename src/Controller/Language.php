@@ -1,17 +1,18 @@
 <?php
 
-global $loader;
+//global $loader;
 
-$loader->get('src/Model/Language');
-$languages = new Language(new Config());
+//$loader->get('src/Model/Language');
+//$languages = new Language(new Config());
 
 if(empty($_SESSION['lg'])){
-  $_SESSION['lg'] = $languages->getDefaultLanguage()['iso'];
+  //$_SESSION['lg'] = $languages->getDefaultLanguage()['iso'];
+  $_SESSION['lg'] = 'lang-pt';
 }
 
-if (Request::isAjax() && $action == 'change'){
-    $_SESSION['lg'] = $param;
-}
+//if (Request::isAjax() && $action == 'change'){
+//    $_SESSION['lg'] = $param;
+//}
 
 // if(!empty($_GET['lang'])){
 // $_SESSION['lang'] = $_GET['lang'];
